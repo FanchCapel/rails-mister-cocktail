@@ -1,3 +1,18 @@
-<h1>Cocktails#show</h1>
-<h1><%= @cocktail.name %></h1>
-<p class=""> <%= @cocktail.dose " of " @cocktail.ingredient%></p>
+<div class="banner" style="background-image: url('https://images.unsplash.com/photo-1568933752435-177b9491f1ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80');">
+  <div class="container">
+    <h1><%= @cocktail.name %></h1>
+  </div>
+</div>
+
+
+  <div class="mt-3 row justify-content-center">
+    <div class="col-4">
+      <h4>Add a recipe:</h4>
+      <%= simple_form_for [ @cocktail, @dose ] do |f| %>
+        <%= f.input :description, placeholder: "6 cl, a dash..." %>
+        <%= f.association :ingredient %>
+        <%= f.submit "Add", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

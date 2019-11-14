@@ -1,4 +1,9 @@
-<h1>Cocktails#index</h1>
-<% @cocktails.each do |cocktail|%>
-<h2 class=""> <%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-<% end %>
+
+<div class="banner" style="background-image: url('https://images.unsplash.com/photo-1561460867-f1e6bd8e62a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');">>
+  <div class="container">
+    <h1>Mister Cocktail</h1>
+    <% @cocktails.each do |cocktail|%>
+    <h2 class=""> <%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+    <% end %>
+  </div>
+</div>
